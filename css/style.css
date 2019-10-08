@@ -1,3 +1,6 @@
+body{
+  font-family: sans-serif;
+}
 label {
   display: block;
   margin: 5px 0;
@@ -6,19 +9,46 @@ label {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width: 100%;
+  background-color: #3f8ecf;
+  margin: 1% 0;
+}
+
+th{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #FFF;
+}
+
+tbody tr:nth-child(odd){
+  background-color: rgba(0,0,0,0.2);
+}
+tbody{
+  background-color: #FFF;
 }
 
 td,
 th {
-  padding: 5px;
+  padding: 1%;
   border-bottom: 1px solid #aaa;
+  font-weight: 400;
 }
-
+table a{
+  background-color: inherit;
+}
 a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
+    all:unset;
+    text-align: center;
     text-decoration: none;
     color: initial;
+    padding: 0.5vw 1vw;
+    margin: 0.1vw;
+    border-radius: 5px;
+    background-color: #418ecf;
+    color:#FFF;
+    transition: filter 0.15s ease-in-out;
+}
+a.button:hover {
+  filter: brightness(1.1);
 }
