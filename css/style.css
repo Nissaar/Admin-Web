@@ -1,11 +1,12 @@
 body{
   font-family: sans-serif;
+  font-size: 16px;
 }
 label {
   display: block;
   margin: 5px 0;
 }
-
+/*Tabke stykes*/
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -37,7 +38,10 @@ th {
 table a{
   background-color: inherit;
 }
-a.button {
+/*Button styles*/
+a.button,
+input[type="submit"],
+button {
     all:unset;
     text-align: center;
     text-decoration: none;
@@ -49,6 +53,19 @@ a.button {
     color:#FFF;
     transition: filter 0.15s ease-in-out;
 }
-a.button:hover {
+a.button:hover,
+input[type="submit"]:hover,
+button:hover {
   filter: brightness(1.1);
+}
+/*Input styles*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"]{
+  all:unset;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px #eee;
+  margin: 2px 0;
 }
