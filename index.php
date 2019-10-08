@@ -63,7 +63,7 @@ session_start();
 <?php require "templates/header.php"; ?>
 
 
-<h2>Login<h2>
+<h2>Login</h2>
 
 <form method="post">
 

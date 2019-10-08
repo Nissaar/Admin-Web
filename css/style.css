@@ -68,4 +68,5 @@ input[type="number"]{
   border-radius: 5px;
   border: solid 1px #eee;
   margin: 2px 0;
+  font-weight: 400;
 }
