@@ -59,7 +59,7 @@ session_start();
         }
     }
 ?>
-
+<main>
 <?php require "templates/header.php"; ?>
 
 
@@ -68,12 +68,12 @@ session_start();
 <form method="post">
 
     <label for="Username">Username</label>
-    <input type="text" name="Username" id="Username">
+    <input class="input--block" type="text" name="Username" id="Username">
 	<label for="Password">Password</label>
-    <input type="Password" name="Password" id="Password">
-    <input type="submit" name="submit" value="Submit">
+    <input class="input--block" type="Password" name="Password" id="Password">
+    <input type="submit" name="submit" value="Submit" class="button--block">
+    <a href="index.php" class="button button--secondary button--block">Back to home</a>
 </form>
 
-<a href="index.php">Back to home</a>
-
+</main>
 <?php require "templates/footer.php"; ?>

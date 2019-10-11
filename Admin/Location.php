@@ -80,7 +80,7 @@ if(isset($_SESSION['Username'])){
 	}*/
 	?>
 
-
+	<main>
 	<?php require "../templates/header.php"; ?>
 	<?php if ($result && $stmt->rowCount() > 0){ ?>
 	<h2><?php echo $_GET['searchLocation']; ?></h2>
@@ -110,5 +110,6 @@ if(isset($_SESSION['Username'])){
 	</tbody>
 	</table>
 	<?php }}else{echo "No Result For " . $_GET['searchLocation'];}?>
-	<a href="Database.php">Back to home</a>
+	<a href="Database.php" class="button button--block button--secondary">Back to home</a>
+	</main>
 	<?php require "../templates/footer.php"; ?>
