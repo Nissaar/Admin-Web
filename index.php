@@ -63,17 +63,36 @@ session_start();
 <?php require "templates/header.php"; ?>
 
 
-<h2>Login<h2>
 
-<form method="post">
 
-    <label for="Username">Username</label>
-    <input type="text" name="Username" id="Username">
-	<label for="Password">Password</label>
-    <input type="Password" name="Password" id="Password">
-    <input type="submit" name="submit" value="Submit">
-</form>
+        <div class="container">
+            <div class="row">
+                <div class="col-3 offset-4">
+                    <h2>Login<h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 offset-4">
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="Username">Username</label>
+                            <input type="email" class="form-control" id="Username" name="Username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password</label>
+                            <input type="password" name="Password" class="form-control" id="Password" placeholder="Password">
+                        </div>
+                        <button type="submit"  name="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-3 offset-4">
+                    <a href="index.php">Back to home</a>
+               </div>
+            </div>
+        </div>
 
-<a href="index.php">Back to home</a>
+
 
 <?php require "templates/footer.php"; ?>
