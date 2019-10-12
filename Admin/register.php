@@ -50,7 +50,7 @@ session_start();
 		}*/
 	} 
 	?>
-
+	<main>
 	<?php require "../templates/header.php"; ?>
 
 	<?php if (isset($_POST['submit']) && $statement) { ?>
@@ -62,16 +62,16 @@ session_start();
 	<form method="post">
 
 		<label for="Username">Username</label>
-		<input type="text" name="Username" id="Username">
+		<input class="input--block" type="text" name="Username" id="Username">
 		<label for="Password">Password</label>
-		<input type="Password" name="Password" id="Password">
+		<input class="input--block" type="Password" name="Password" id="Password">
 		<label for="confirm_Password">Confirm Password</label>
-		<input type="Password" name="confirm_Password" id="confirm_Password">
-		<input type="submit" name="submit" value="Submit">
+		<input class="input--block" type="Password" name="confirm_Password" id="confirm_Password">
+		<input type="submit" name="submit" value="Submit"  class=" button--block">
 	</form>
 
-	<a href="Database.php">Back to home</a>
-
+	<a href="Database.php" class="button button--block button--secondary">Back to home</a>
+	</main>
 	<?php require "../templates/footer.php"; ?>
 <?php /*}else{
 	header('Location: index.php');

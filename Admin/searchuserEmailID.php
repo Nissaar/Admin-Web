@@ -18,7 +18,7 @@ if(isset($_SESSION['Username'])){
 	}*/
 	?>
 
-
+	<main>
 	<?php require "../templates/header.php"; ?>
 	<?php if ($result && $stmt->rowCount() > 0){ ?>
 	<h2><?php echo $_GET['searchEmailID']; ?></h2>
@@ -48,7 +48,8 @@ if(isset($_SESSION['Username'])){
 	  </tbody>
 	</table>
 	<?php }else{echo "Pas de Resultat pour " . $_GET['searchEmailID'];}?>
-	<a href="Database.php">Back to home</a>
+	<a href="Database.php" class="button button--block button--secondary">Back to home</a>
+	</main>
 	<?php require "../templates/footer.php"; ?>
 <?php }else{
 	header('Location: index.php');

@@ -27,7 +27,7 @@ if(isset($_SESSION['Username'])){
             $error->getMessage();
         }*/
     }?>
-
+<main>
 <?php require "../templates/header.php"; ?>
  <form method="post"> 
 
@@ -38,11 +38,11 @@ if(isset($_SESSION['Username'])){
     <?php endforeach; ?>
     </select>
 
-    <input type="submit" name="submit" value="Submit"> 
+    <input type="submit" name="submit" value="Submit" class="button--block"> 
  </form> 
 
- <a href="Database.php">Back to home</a>
-
+ <a href="Database.php" class="button button--block button--secondary">Back to home</a>
+</main>
 <?php require "../templates/footer.php"; ?><?php
 
 }else{

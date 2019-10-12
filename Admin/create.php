@@ -44,6 +44,7 @@ if(isset($_SESSION['Username'])){
 	}
 
 	?>
+	<main>
 	<?php require "../templates/header.php"; ?>
 
 	<h2>Add a user</h2>
@@ -51,11 +52,11 @@ if(isset($_SESSION['Username'])){
 	<form method="post">
 
 		<label for="EmailID">Email Address</label>
-		<input type="text" name="EmailID" id="EmailID">
+		<input class="input--block"  type="text" name="EmailID" id="EmailID">
 		<label for="Location">Location</label>
-		<input type="text" name="Location" id="Location">
+		<input  class="input--block" type="text" name="Location" id="Location">
 		<label for="Name">Name</label>
-		<input type="text" name="Name" id="Name">
+		<input class="input--block"  type="text" name="Name" id="Name">
 		<!-- <label for="Password">Password</label>
 		<input type="text" name="Password" id="Password"> 
 	   <label for="Status">Status</label>
@@ -63,12 +64,12 @@ if(isset($_SESSION['Username'])){
 	  <option value="Pas-Répondu">Pas-Répondu</option>
 	  <option value="Répondu">Répondu</option>
 	   </select> -->
-		<input type="submit" name="submit" value="Submit">
+		<input type="submit" name="submit" value="Submit" class="button--block">
+		<a href="Database.php" class="button button--secondary button--block">Back to home</a>
 	</form>
 
-	<a href="Database.php">Back to home</a>
-
 	<?php require "../templates/footer.php"; ?>
+</main>
 <?php }else{
 	header('Location: index.php');
 }

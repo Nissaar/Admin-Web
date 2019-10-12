@@ -5,12 +5,13 @@ session_start();
 require '../config/config.php';
 require '../config/common.php';
 if(isset($_SESSION['Username'])){
+	echo "<main>";
 	require "../templates/header.php"; ?>
-	<ul>	
-		<a href="create.php" class="button">Add a new user</a>
+	<ul class="nav-wrapper">	
+		<li class="list--unformat"><a href="create.php" class="button">Add a new user</a></li>
 		<!-- <a href="delete.php" class="button">Delete a User </a> -->
-		<a href="Statusrepondu.php" class="button"> Filtrer par Status Repondu </a>
-		<a href="Statuspasrepondu.php" class="button"> Filtrer par Status Pas-Repondu </a>
+		<li class="list--unformat"><a href="Statusrepondu.php" class="button"> Filtrer par Status Repondu </a></li>
+		<li class="list--unformat"><a href="Statuspasrepondu.php" class="button"> Filtrer par Status Pas-Repondu </a></li>
 	</ul>
 	<ul>	
 		<form  method="GET" action="Location.php?>"  id="searchform"> 
@@ -137,7 +138,7 @@ if(isset($_SESSION['Username'])){
 	</table>
 
 	<a href="logout.php" class="button">Logout</a>
-
+</main>
 	<?php require "../templates/footer.php"; ?>
 <?php }else{
 	header('Location: index.php');

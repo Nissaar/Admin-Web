@@ -42,12 +42,12 @@ if(isset($_SESSION['Username'])){
 	}
 	?>
 
+	<main>
 	<?php require "../templates/header.php"; ?>
 
 	<?php if (isset($_POST['submit']) && $stmt) : ?>
 	<?php echo escape($_POST['Name']); ?> successfully updated.
 	<?php endif; ?>
-
 	<h2>Edit a user</h2>
 	<form method="post">
 		<?php foreach ($test as $key => $value) : ?>
@@ -59,9 +59,10 @@ if(isset($_SESSION['Username'])){
 					<option value="Pas-Répondu">Pas-Répondu</option>
 					<option value="Répondu">Répondu</option>
 			</select>
-		<input type="submit" name="submit" value="Submit">
+		<input type="submit" name="submit" value="Submit" class="button--block">
+		<a class="button--block button--secondary button" href="Database.php">Back to home</a>
 	</form>
-	<a href="Database.php">Back to home</a>
+	</main>
 	<?php require "../templates/footer.php"; ?>
 <?php }else{
 	header('Location: index.php');
